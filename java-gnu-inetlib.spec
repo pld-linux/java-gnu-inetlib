@@ -69,6 +69,7 @@ schematów URL-i do klasy java.net.URL.
 Summary:	API documentation for GNU inetlib
 Summary(pl):	Dokumentacja API GNU inetlib
 Group:		Documentation
+Obsoletes:	java-gnu-inetlib-doc
 
 %description javadoc
 API documentation for GNU inetlib.
