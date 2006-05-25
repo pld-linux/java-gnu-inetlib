@@ -12,6 +12,8 @@ URL:		http://www.gnu.org/software/classpath/inetlib.html
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	jdk
+BuildRequires:	jpackage-utils
+BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	jre
 BuildArch:	noarch
 ExclusiveArch:	i586 i686 pentium3 pentium4 athlon %{x8664} noarch
@@ -63,15 +65,15 @@ Ponadto inetlib zawiera implementacje URLStreamHandler dla niektórych
 protoko³ów. Mo¿na ich u¿ywaæ w celu dodania obs³ugi odpowiednich
 schematów URL-i do klasy java.net.URL.
 
-%package doc
+%package javadoc
 Summary:	API documentation for GNU inetlib
 Summary(pl):	Dokumentacja API GNU inetlib
 Group:		Documentation
 
-%description doc
+%description javadoc
 API documentation for GNU inetlib.
 
-%description doc -l pl
+%description javadoc -l pl
 Dokumentacja API GNU inetlib.
 
 %prep
@@ -82,8 +84,8 @@ Dokumentacja API GNU inetlib.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-# Sun java requires . in CLASSPATH for configure test
-export CLASSPATH=.
+unset CLASSPATH || :
+export JAVA_HOME=%{java_home}
 export JAVAC=%{_bindir}/javac
 export JAVA=%{_bindir}/java
 %configure
@@ -94,8 +96,12 @@ export JAVA=%{_bindir}/java
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+cp -R docs/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -105,6 +111,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README
 %{_javadir}/*.jar
 
-%files doc
+%files javadoc
 %defattr(644,root,root,755)
-%doc docs/*
+%doc %{_javadocdir}/%{name}-%{version}
