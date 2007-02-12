@@ -1,5 +1,5 @@
 Summary:	GNU inetlib - library of clients for common Internet protocols
-Summary(pl):	GNU inetlib - biblioteka klientÛw popularnych protoko≥Ûw internetowych
+Summary(pl.UTF-8):   GNU inetlib - biblioteka klient√≥w popularnych protoko≈Ç√≥w internetowych
 Name:		java-gnu-inetlib
 Version:	1.1.1
 Release:	2
@@ -42,9 +42,9 @@ Additionally, inetlib includes URLStreamHandler implementations for
 some of the protocols. These can be used to add support for the
 corresponding URL scheme to the java.net.URL class.
 
-%description -l pl
-GNU inetlib to biblioteka klientÛw popularnych protoko≥Ûw
-internetowych. Aktualnie obs≥ugiwane s± nastÍpuj±ce protoko≥y:
+%description -l pl.UTF-8
+GNU inetlib to biblioteka klient√≥w popularnych protoko≈Ç√≥w
+internetowych. Aktualnie obs≈Çugiwane sƒÖ nastƒôpujƒÖce protoko≈Çy:
 
  - Hypertext Transfer Protocol (HTTP)
  - File Transfer Protocol (FTP)
@@ -56,18 +56,18 @@ internetowych. Aktualnie obs≥ugiwane s± nastÍpuj±ce protoko≥y:
  - Gopher
  - Finger
 
-Biblioteka inetlib w zamierzeniu jest podobna do biblioteki protoko≥Ûw
-internetowych Pythona - API jest jak najbardziej zbliøone do projektu
-samych protoko≥Ûw. Pozwala to na bardzo wydajne kodowanie aplikacji
+Biblioteka inetlib w zamierzeniu jest podobna do biblioteki protoko≈Ç√≥w
+internetowych Pythona - API jest jak najbardziej zbli≈ºone do projektu
+samych protoko≈Ç√≥w. Pozwala to na bardzo wydajne kodowanie aplikacji
 klienckich.
 
-Ponadto inetlib zawiera implementacje URLStreamHandler dla niektÛrych
-protoko≥Ûw. Moøna ich uøywaÊ w celu dodania obs≥ugi odpowiednich
-schematÛw URL-i do klasy java.net.URL.
+Ponadto inetlib zawiera implementacje URLStreamHandler dla niekt√≥rych
+protoko≈Ç√≥w. Mo≈ºna ich u≈ºywaƒá w celu dodania obs≈Çugi odpowiednich
+schemat√≥w URL-i do klasy java.net.URL.
 
 %package javadoc
 Summary:	API documentation for GNU inetlib
-Summary(pl):	Dokumentacja API GNU inetlib
+Summary(pl.UTF-8):   Dokumentacja API GNU inetlib
 Group:		Documentation
 Requires:	jpackage-utils
 Obsoletes:	java-gnu-inetlib-doc
@@ -75,7 +75,7 @@ Obsoletes:	java-gnu-inetlib-doc
 %description javadoc
 API documentation for GNU inetlib.
 
-%description javadoc -l pl
+%description javadoc -l pl.UTF-8
 Dokumentacja API GNU inetlib.
 
 %prep
