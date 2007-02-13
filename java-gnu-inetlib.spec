@@ -1,5 +1,5 @@
 Summary:	GNU inetlib - library of clients for common Internet protocols
-Summary(pl.UTF-8):   GNU inetlib - biblioteka klientów popularnych protokołów internetowych
+Summary(pl.UTF-8):	GNU inetlib - biblioteka klientów popularnych protokołów internetowych
 Name:		java-gnu-inetlib
 Version:	1.1.1
 Release:	2
@@ -67,7 +67,7 @@ schematów URL-i do klasy java.net.URL.
 
 %package javadoc
 Summary:	API documentation for GNU inetlib
-Summary(pl.UTF-8):   Dokumentacja API GNU inetlib
+Summary(pl.UTF-8):	Dokumentacja API GNU inetlib
 Group:		Documentation
 Requires:	jpackage-utils
 Obsoletes:	java-gnu-inetlib-doc
