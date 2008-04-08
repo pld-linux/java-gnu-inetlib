@@ -5,7 +5,7 @@ Version:	1.1.1
 Release:	2
 License:	GPL
 Group:		Libraries
-Source0:	ftp://ftp.gnu.org/gnu/classpath/inetlib-%{version}.tar.gz
+Source0:	http://ftp.gnu.org/gnu/classpath/inetlib-%{version}.tar.gz
 # Source0-md5:	aaa24be4bc8d172ac675be8bdfa636ee
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.gnu.org/software/classpath/inetlib.html
