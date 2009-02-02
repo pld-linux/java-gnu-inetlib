@@ -4,7 +4,7 @@ Name:		java-gnu-inetlib
 Version:	1.1.1
 Release:	3
 License:	GPL
-Group:		Libraries
+Group:		Libraries/Java
 Source0:	http://ftp.gnu.org/gnu/classpath/inetlib-%{version}.tar.gz
 # Source0-md5:	aaa24be4bc8d172ac675be8bdfa636ee
 Patch0:		%{name}-DESTDIR.patch
