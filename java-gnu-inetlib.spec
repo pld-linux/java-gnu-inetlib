@@ -1,13 +1,12 @@
 Summary:	GNU inetlib - library of clients for common Internet protocols
 Summary(pl.UTF-8):	GNU inetlib - biblioteka klientów popularnych protokołów internetowych
 Name:		java-gnu-inetlib
-Version:	1.1.1
-Release:	3
-License:	GPL
+Version:	1.1.2
+Release:	1
+License:	GPL v2+
 Group:		Libraries/Java
 Source0:	http://ftp.gnu.org/gnu/classpath/inetlib-%{version}.tar.gz
-# Source0-md5:	aaa24be4bc8d172ac675be8bdfa636ee
-Patch0:		%{name}-DESTDIR.patch
+# Source0-md5:	e28147996e70b63b6caa743319a4bf46
 URL:		http://www.gnu.org/software/classpath/inetlib.html
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -79,7 +78,6 @@ Dokumentacja API GNU inetlib.
 
 %prep
 %setup -q -n inetlib-%{version}
-%patch0 -p1
 
 %build
 %{__aclocal}
@@ -96,7 +94,6 @@ export JAVA=%{_bindir}/java
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
 
 %{__make} install \
@@ -110,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%{_javadir}/*.jar
+%{_javadir}/inetlib.jar
 
 %files javadoc
 %defattr(644,root,root,755)
