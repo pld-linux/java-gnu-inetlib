@@ -1,0 +1,100 @@
+diff -ur inetlib-1.1.2/source/gnu/inet/gopher/GopherConnection.java inetlib-1.1.2.javadoc/source/gnu/inet/gopher/GopherConnection.java
+--- inetlib-1.1.2/source/gnu/inet/gopher/GopherConnection.java	2010-03-08 19:01:26.000000000 +0100
++++ inetlib-1.1.2.javadoc/source/gnu/inet/gopher/GopherConnection.java	2017-03-05 14:46:03.045469924 +0100
+@@ -66,7 +66,7 @@
+   /**
+    * Creates a new connection to the gopher server at the specified
+    * hostname.
+-   * @param hostname the hostname
++   * @param host the hostname
+    */
+   public GopherConnection(String host)
+     throws IOException
+@@ -77,7 +77,7 @@
+   /**
+    * Creates a new connection to the gopher server at the specified
+    * hostname with the specified non-standard port.
+-   * @param hostname the hostname
++   * @param host the hostname
+    * @param port the non-standard port to use
+    */
+   public GopherConnection(String host, int port)
+diff -ur inetlib-1.1.2/source/gnu/inet/http/HTTPConnection.java inetlib-1.1.2.javadoc/source/gnu/inet/http/HTTPConnection.java
+--- inetlib-1.1.2/source/gnu/inet/http/HTTPConnection.java	2010-03-08 19:01:26.000000000 +0100
++++ inetlib-1.1.2.javadoc/source/gnu/inet/http/HTTPConnection.java	2017-03-05 14:49:10.984484690 +0100
+@@ -277,7 +277,6 @@
+ 
+   /**
+    * Returns the HTTP version string supported by this connection.
+-   * @see #version
+    */
+   public String getVersion()
+   {
+diff -ur inetlib-1.1.2/source/gnu/inet/http/ResponseHeaderHandler.java inetlib-1.1.2.javadoc/source/gnu/inet/http/ResponseHeaderHandler.java
+--- inetlib-1.1.2/source/gnu/inet/http/ResponseHeaderHandler.java	2010-03-08 19:01:26.000000000 +0100
++++ inetlib-1.1.2.javadoc/source/gnu/inet/http/ResponseHeaderHandler.java	2017-03-05 14:49:29.671384878 +0100
+@@ -41,7 +41,6 @@
+ /**
+  * Callback interface for objects that wish to be notified of response
+  * header values.
+- * @see Request#setHeaderHandler(String)
+  *
+  * @author <a href='mailto:dog@gnu.org'>Chris Burdess</a>
+  */
+diff -ur inetlib-1.1.2/source/gnu/inet/imap/IMAPConnection.java inetlib-1.1.2.javadoc/source/gnu/inet/imap/IMAPConnection.java
+--- inetlib-1.1.2/source/gnu/inet/imap/IMAPConnection.java	2017-03-05 14:49:49.981638694 +0100
++++ inetlib-1.1.2.javadoc/source/gnu/inet/imap/IMAPConnection.java	2017-03-05 14:44:24.514239315 +0100
+@@ -350,6 +350,7 @@
+    * <li>A tagged response corresponding to a pending command</li>
+    * <li>An untagged error response</li>
+    * <li>A continuation response</li>
++   * </ul>
+    */
+   protected IMAPResponse readResponse()
+     throws IOException
+diff -ur inetlib-1.1.2/source/gnu/inet/ldap/BEREncoder.java inetlib-1.1.2.javadoc/source/gnu/inet/ldap/BEREncoder.java
+--- inetlib-1.1.2/source/gnu/inet/ldap/BEREncoder.java	2010-03-08 19:01:26.000000000 +0100
++++ inetlib-1.1.2.javadoc/source/gnu/inet/ldap/BEREncoder.java	2017-03-05 14:45:34.711782682 +0100
+@@ -56,7 +56,7 @@
+ 
+   /**
+    * Constructor.
+-   * @param utf whether to use UTF-8 for encoding strings
++   * @param utf8 whether to use UTF-8 for encoding strings
+    */
+   public BEREncoder(boolean utf8)
+   {
+@@ -65,7 +65,7 @@
+ 
+   /**
+    * Constructor.
+-   * @param utf whether to use UTF-8 for encoding strings
++   * @param utf8 whether to use UTF-8 for encoding strings
+    * @param initialSize the initial buffer size
+    */
+   public BEREncoder(boolean utf8, int initialSize)
+diff -ur inetlib-1.1.2/source/gnu/inet/ldap/ResultHandler.java inetlib-1.1.2.javadoc/source/gnu/inet/ldap/ResultHandler.java
+--- inetlib-1.1.2/source/gnu/inet/ldap/ResultHandler.java	2010-03-08 19:01:26.000000000 +0100
++++ inetlib-1.1.2.javadoc/source/gnu/inet/ldap/ResultHandler.java	2017-03-05 14:45:04.911410481 +0100
+@@ -65,7 +65,7 @@
+    * <li>java.lang.Double</li>
+    * <li>java.lang.Boolean</li>
+    * <li>byte[]</li>
+-   * <ul>
++   * </ul>
+    * @param name the object name DN
+    * @param attributes a map of attribute names to values
+    */
+diff -ur inetlib-1.1.2/source/gnu/inet/nntp/NNTPConstants.java inetlib-1.1.2.javadoc/source/gnu/inet/nntp/NNTPConstants.java
+--- inetlib-1.1.2/source/gnu/inet/nntp/NNTPConstants.java	2010-03-08 19:01:26.000000000 +0100
++++ inetlib-1.1.2.javadoc/source/gnu/inet/nntp/NNTPConstants.java	2017-03-05 14:48:15.253788296 +0100
+@@ -98,8 +98,7 @@
+    * (<tt>g</tt> = newsgroup name,
+    * <tt>l</tt> = last article number in group,
+    * <tt>f</tt> = first article number in group,
+-   * <tt>p</tt> = &apos;y&apos; if posting to the group is allowed,
+-   * &apos;n&apos; otherwise)
++   * <tt>p</tt> = if posting to the group is allowed.)
+    */
+   public static final short LIST_FOLLOWS = 215;
+ 
